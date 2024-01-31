@@ -13,6 +13,7 @@ def get_env():
 @app.route('/env')
 def list_env_vars():
     env_vars = os.environ
+    print("loading env vars")
     return '\n'.join([f'{key}: {value}' for key, value in env_vars.items()])
 
 @app.route('/env-file')
